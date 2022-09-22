@@ -38,16 +38,17 @@ In addition, data preprocessing can be facilitated by the following
 
 ## Using LuxPom
 
-The first step in LuxPom is to segment the genome via HMM (using the python package pomegranate). A python script **run\_hmm.py** is supplied which calls the python package `pomegranate` to determine the methylation state for each cytosine then combines adjacent cytosines with the same methylation state into regions (includes compiling of relevant __Stan__ code). 
+The first step in LuxPom is to segment the genome via HMM (using the python package pomegranate). A python script **run\_hmm.py** is supplied which calls the python package `pomegranate` to determine the methylation state for each cytosine then combines adjacent cytosines with the same methylation state into regions (includes compiling of relevant __Stan__ code). The script returns the output files **total_reads_all.txt** and **methylated_reads_all.txt** which contain the total and methylated reads, respectively, for the segmented regions.
 
-	 usage: run_hmm.py [-h] -l1 CONTROL_INDICES_LIST -l2 CASE_INDICES_LIST -d1 TOTAL_READ_COUNTS_FILE -d2 METHYLATED_READ_COUNTS_FILE -o OUTFOLDER
+	 usage: run_hmm.py [-h] -l1 CONTROL_INDICES_LIST -l2 CASE_INDICES_LIST -d1 TOTAL_READ_COUNTS_FILE -d2 METHYLATED_READ_COUNTS_FILE -o OUTFOLDER -m MIN_TOTAL_COUNT -c MIN_CPGS
 
 	 
 	 Estimates experimental parameters bsEff and seqErr
 	 
 	 optional arguments:
 	 -h, --help							show this help message and exit
-	 -f CONTROL_DATA_FILES_LIST, -file_list CONTROL_DATA_FILES_LIST	space-delimited list of bed files from bismark pipeline (or similar format) containing counts from control cytosine
+	 -l1 CONTROL_INDICES_LIST, --l1 CONTROL_INDICES_LIST	
+	 >space-delimited list of bed files from bismark pipeline (or similar format) containing counts from control cytosine
 	 -n LIBRARY_LABELS_LIST, --library_names LIBRARY_LABELS_LIST	space-delimited list of labels for files listed in lambda_fileList.txt
 	 -l $STAN_HOME, --cmdstan_loc $STAN_HOME 			CmdStan directory with full pathname
 	 -o OUTFOLDER, --outfolder OUTFOLDER				directory containing control output with full pathname
