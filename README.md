@@ -67,6 +67,14 @@ The file **total\_fileList.txt** contains the list of textfiles containing the t
 
 *Output*
 
+The output files are **total\_reads\_all.txt**, **methylated\_reads\_all.txt**, **hidden\_states\_all.txt**, **counts.txt**, **model\_states.txt** and **transition\_probs.txt**.
+
+* **total\_reads\_all.txt** and **methylated\_reads\_all.txt** contain the combined total and methylated read counts, respectively, with one line per region. These files are used as input for **run\_luxPom.py** described below.
+* **hidden\_states\_all.txt** contains the methylation state for each CpG.
+* **counts.txt** contains the methylation state for each region and the number of CpGs.
+* **model\_states.txt** contains the distribution of the states.
+* **transition\_probs.txt** contains the transition probabilities.
+
 The output files consist of __Stan__-generated diagnostic and output files including **output.csv** which contains samples from the approximate posterior of the model parameters. The mean posterior for the parameters bsEff and seqErr from the latter are used as estimates of the experimental parameters used in the second module. 
 
 The second step in using LuxRep is estimating the methylation levels of the noncontrol cytosine and testing for differential methylation. A python script **luxrep.py** is supplied for generating input files from user-supplied data files and running the analysis (includes compiling of relevant __Stan__ code). 
