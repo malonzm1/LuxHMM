@@ -1,1 +1,1 @@
-# GitPom
+# LuxPom
