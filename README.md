@@ -46,17 +46,20 @@ The first step in LuxPom is to segment the genome via HMM (using the python pack
 	 Estimates experimental parameters bsEff and seqErr
 	 
 	 optional arguments:
-	 -h, --help							show this help message and exit
-	 -l1 CONTROL_INDICES_LIST, --l1 CONTROL_INDICES_LIST	
-	 >space-delimited list of bed files from bismark pipeline (or similar format) containing counts from control cytosine
-	 -n LIBRARY_LABELS_LIST, --library_names LIBRARY_LABELS_LIST	space-delimited list of labels for files listed in lambda_fileList.txt
-	 -l $STAN_HOME, --cmdstan_loc $STAN_HOME 			CmdStan directory with full pathname
-	 -o OUTFOLDER, --outfolder OUTFOLDER				directory containing control output with full pathname
-	 -v, --version							show program's version number and exit
+	 -h, --help									show this help message and exit
+	 -l1 CONTROL_INDICES_LIST, --l1 CONTROL_INDICES_LIST				comma-delimited list containing control indices, starting from zero
+	 -l2 CASE_INDICES_LIST, --l2 CASE_INDICIES_LIST					comma-delimited list containing case indices, starting from zero
+	 -d1 TOTAL_READ_COUNTS_FILE, --data_total TOTAL_READ_COUNTS_FILE		file containing input textfiles for total read counts; one line per textfile
+	 -d2 METHYLATED_READ_COUNTS_FILE, --data_methylated METHYLATED_READ_COUNTS_FILE	file containing input textfiles for methylated read counts; one line per textfile
+	 -o OUTFOLDER, --outfolder OUTFOLDER 						output location
+	 -m MIN_TOTAL_COUNT, --min_count MIN_TOTAL_COUNT				minimum total read count; if not specified, 5 is used as default
+	 -c MIN_CPGS, --min_CpGs MIN_CPGS						minimum number of CpGs in regions; if not specified, 2 is used as default
+	 -v, --version									show program's version number and exit
 
-For instance, luxrep\_exp.py can be called as
-
-	python luxrep_exp.py -f data/lambda_fileList.txt -n data/nameList.txt -o $PWD/controls -l $STAN_HOME
+For instance, run\_hmm.py can be called as
+	
+	python run_hmm.py run_hmm.py -l1 0,1,2,3,4,5 -l2 6,7,8,9,10,11 -c 5 -d1 total_files.txt -d2 methylated_files.txt
+	python run_hmm.py -f data/lambda_fileList.txt -n data/nameList.txt -o $PWD/controls -l $STAN_HOME
 
 *Input*
 
