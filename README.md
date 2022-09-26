@@ -36,7 +36,7 @@ LuxRep requires the following software
 
 ## Using LuxPom
 
-The first step in LuxPom is to segment the genome via HMM (using the python package `pomegranate`) into regions that are hypomethylated, hypermethylated or equal methylation between two groups. A python script **run\_hmm.py** is supplied which calls the python package `pomegranate` to determine the methylation state for each cytosine then combines adjacent cytosines with the same methylation state into regions. The script returns the output files **total_reads_all.txt** and **methylated_reads_all.txt** which contain the total and methylated reads, respectively, for the segmented regions.
+The first step in LuxPom is to segment the genome via HMM (using the python package `pomegranate`) into regions that are hypomethylated, hypermethylated or equally methylated between two groups. A python script **run\_hmm.py** is supplied which calls the python package `pomegranate` to determine the methylation state for each cytosine then combines adjacent cytosines with the same methylation state into regions. The script returns the output files **total_reads_all.txt** and **methylated_reads_all.txt** which contain the total and methylated reads, respectively, for the segmented regions.
 
 	 usage: run_hmm.py [-h] -l1 CONTROL_INDICES_LIST -l2 CASE_INDICES_LIST -d1 TOTAL_READ_COUNTS_FILE -d2 METHYLATED_READ_COUNTS_FILE -o OUTFOLDER -m MIN_TOTAL_COUNT -c MIN_CPGS
 
