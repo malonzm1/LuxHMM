@@ -107,15 +107,15 @@ For instance, run_luxPom.py can be called as
 
 **References**
 
-[1] T. Äijö, X. Yue, A. Rao and H. Lähdesmäki, “LuxGLM: a probabilistic covariate model for quantification of DNA methylation modifications with complex experimental designs.,” Bioinformatics, 32.17:i511-i519, Sep 2016. 
+[1] J. Schreiber, “Pomegranate: fast and flexible probabilistic modeling in python.,” Journal of Machine Learning Research, 18.164:1-6, 2018.
 
-[2] V. Halla-Aho & H. Lähdesmäki, “LuxUS: DNA methylation analysis using generalized linear mixed model with spatial correlation.,” Bioinformatics, 36.17:4535-4543, 2020.
+[2] T. Äijö, X. Yue, A. Rao and H. Lähdesmäki, “LuxGLM: a probabilistic covariate model for quantification of DNA methylation modifications with complex experimental designs.,” Bioinformatics, 32.17:i511-i519, Sep 2016. 
 
-[2] F. Krueger and S. R. Andrews, “Bismark: a flexible aligner and methylation caller for Bisulfite-Seq applications.,” Bioinformatics, 27.11:1571-1572, Jun 2011. 
+[3] V. Halla-Aho & H. Lähdesmäki, “LuxUS: DNA methylation analysis using generalized linear mixed model with spatial correlation.,” Bioinformatics, 36.17:4535-4543, 2020.
 
-[3] Stan Development Team, “Stan Modeling Language Users Guide and Reference Manual, Version 2.14.0.,” http://mc-stan.org, Jan 2016. 
+[4] F. Krueger and S. R. Andrews, “Bismark: a flexible aligner and methylation caller for Bisulfite-Seq applications.,” Bioinformatics, 27.11:1571-1572, Jun 2011. 
 
-[4] Stan Development Team, “PyStan: the Python interface to Stan, Version 2.14.0.0.,” http://mc-stan.org, Jan 2016.
+[5] Stan Development Team, “Stan Modeling Language Users Guide and Reference Manual, Version 2.14.0.,” http://mc-stan.org, Jan 2016. 
 
-[5] A. R. Quinlan and I. M. Hall, “BEDTools: a flexible suite of utilities for comparing genomic features,” Bioinformatics, 26.6:841–842, Mar 2010.
+[6] Stan Development Team, “PyStan: the Python interface to Stan, Version 2.14.0.0.,” http://mc-stan.org, Jan 2016.
 
