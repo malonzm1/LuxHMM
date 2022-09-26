@@ -85,9 +85,9 @@ The second step in using LuxPom is estimating the methylation levels and inferri
 	 -m REGION_METHYLATED_FILE, --methylated_file REGION_METHYLATED_FILE	file containing methylated read counts in regions; if not supplied, defaults to hmm_output/total_reads_all.txt
 	 -d DESIGN_MATRIX, --design_matrix DESIGN_MATRIX			file containing design matrix
 	 -o OUTFOLDER, --outfolder OUTFOLDER					directory containing data analysis output; if not supplied, defaults to results
-	 -a BS_EFF, --bs_Eff BS_EFF						comma-delimited bisulfite conversion efficiencies of replicates; defaults to 1.0
-	 -b BS_BEFF, --bs_BEff BS_BEFF						comma-delimited incorrect bisulfite conversion efficiencies of replicates; defaults to 0
-	 -c SEQ_ERR, --seq_Err SEQ_ERR						comma-delimited sequencing error rates of replicates; defaults to 0
+	 -a BS_EFF, --bs_Eff BS_EFF						comma-delimited bisulfite conversion efficiencies of replicates; if not supplied, defaults to 1.0
+	 -b BS_BEFF, --bs_BEff BS_BEFF						comma-delimited incorrect bisulfite conversion efficiencies of replicates; if not supplied, defaults to 0
+	 -c SEQ_ERR, --seq_Err SEQ_ERR						comma-delimited sequencing error rates of replicates; if not supplied, defaults to 0
 
 	 -l $STAN_HOME, --cmdstan_loc $STAN_HOME 				CmdStan directory with full pathname
 	 -v, --version								show program's version number and exit
