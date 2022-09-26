@@ -92,7 +92,7 @@ The second step in using LuxPom is estimating the methylation levels and inferri
 	 -l $STAN_HOME, --cmdstan_loc $STAN_HOME 				CmdStan directory with full pathname
 	 -v, --version								show program's version number and exit
 
-For instance, luxrep.py can be called as
+For instance, run_luxPom.py can be called as
 
 	python run_luxPom.py -t hmm_output/total_reads_all.txt -m hmm_output/methylated_reads_all.txt -d design_matrix.txt-l $STAN_HOME
 
