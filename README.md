@@ -75,7 +75,7 @@ The output files are **total\_reads\_all.txt**, **methylated\_reads\_all.txt**, 
 
 The second step in using LuxPom is estimating the methylation levels and inferring differential methylation. A python script **run\_luxPom.py** is supplied for generating input files from user-supplied data files and running the analysis (includes compiling of relevant __Stan__ code). 
 
-	 usage: luxrep.py -t REGION_TOTAL_FILE -m REGION_METHYLATED_FILE -d DESIGN_MATRIX -o OUTFOLDER -a BS_EFF -b BS_BEFF -c SEQ_ERR -l $STAN_HOME
+	 usage: run_luxPom.py -t REGION_TOTAL_FILE -m REGION_METHYLATED_FILE -d DESIGN_MATRIX -o OUTFOLDER -a BS_EFF -b BS_BEFF -c SEQ_ERR -l $STAN_HOME
 	 
 	 Estimates methylation levels and infers differential methylation
 	 
