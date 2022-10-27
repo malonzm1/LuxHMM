@@ -1,0 +1,2 @@
+total_reads_chrX_pos.txt
+total_reads_chrY_pos.txt
