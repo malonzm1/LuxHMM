@@ -1,0 +1,2 @@
+/scratch/cs/csb/users/malonzm1/scripts/essi_dmr/4/data/pos/methylated_reads_chrX_pos.txt
+/scratch/cs/csb/users/malonzm1/scripts/essi_dmr/4/data/pos/methylated_reads_chrY_pos.txt
