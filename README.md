@@ -52,6 +52,7 @@ The first step in LuxPom is to segment the genome via HMM (using the python pack
 	 -o OUTFOLDER, --outfolder OUTFOLDER 						output location; if not supplied, defaults to hmm_output
 	 -m MIN_TOTAL_COUNT, --min_count MIN_TOTAL_COUNT				minimum total read count; if not specified, 5 is used as default
 	 -c MIN_CPGS, --min_CpGs MIN_CPGS						minimum number of CpGs in regions; if not specified, 2 is used as default
+	 -a ALL_REGIONS, --all_regions ALL_REGIONS					whether all regions used as input or just hypo- and hypermethylated regions ('T' or 'F'); default is 'F'
 	 -v, --version									show program's version number and exit
 
 For instance, run\_hmm.py can be called as
