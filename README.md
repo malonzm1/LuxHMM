@@ -1,4 +1,4 @@
-# LuxPom
+# LuxHMM
 
 ## Overview
 LuxPom is a genome wide methylation analysis tool that detects differentially methylated regions from bisulfite sequencing data. It performs genome segmentation of cytosines into methylated regions using hidden Markov model (HMM) as implemented in the Python package `pomegranate` and infers differential methylation by logistic regression based on **LuxGLM** and **LuxUS**, probabilistic methods for methylation analysis that handle complex experimental deisgns. The model is implemented in __Stan__ and faster processing suited for genome wide analysis is achieved by using variational inference for posterior approximation, as featured in __Stan__. 
