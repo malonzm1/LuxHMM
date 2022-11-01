@@ -1,7 +1,7 @@
 # LuxHMM
 
 ## Overview
-LuxPom is a genome wide methylation analysis tool that detects differentially methylated regions from bisulfite sequencing data. It performs genome segmentation of cytosines into methylated regions using hidden Markov model (HMM) as implemented in the Python package `pomegranate` and infers differential methylation by logistic regression based on **LuxGLM** and **LuxUS**, probabilistic methods for methylation analysis that handle complex experimental deisgns. The model is implemented in __Stan__ and faster processing suited for genome wide analysis is achieved by using variational inference for posterior approximation, as featured in __Stan__. 
+LuxHMM is a genome wide methylation analysis tool that detects differentially methylated regions from bisulfite sequencing data. It performs genome segmentation of cytosines into methylated regions using hidden Markov model (HMM) as implemented in the Python package `pomegranate` and infers differential methylation by logistic regression based on **LuxGLM** and **LuxUS**, probabilistic methods for methylation analysis that handle complex experimental deisgns. The model is implemented in __Stan__ and faster processing suited for genome wide analysis is achieved by using variational inference for posterior approximation, as featured in __Stan__. 
 
 ## Features
 
@@ -10,12 +10,12 @@ LuxPom is a genome wide methylation analysis tool that detects differentially me
 
 ## Quick introduction
 
-A usual LuxPom pipeline has the following steps
+A usual LuxHMM pipeline has the following steps
 
 1. Generate count data from sequencing reads using e.g. **Bismark**
 	1. Align BS-seq data
 	2. Extract converted and unconverted counts
-2. Methylation analysis with **LuxPom** (instructions given below)
+2. Methylation analysis with **LuxHMM** (instructions given below)
 	1. Segment genome into methylated regions
 	2. Quantify methylation levels and identify differentially methylation regions
 
@@ -34,9 +34,9 @@ LuxRep requires the following software
 * __Scipy__ (tested on version 1.8.0)
 
 
-## Using LuxPom
+## Using LuxHMM
 
-The first step in LuxPom is to segment the genome via HMM (using the python package `pomegranate`) into regions that are hypomethylated, hypermethylated or equally methylated between two groups. A python script **run\_hmm.py** is supplied which calls the python package `pomegranate` to determine the methylation state for each cytosine then combines adjacent cytosines with the same methylation state into regions. The script returns the output files **total_reads_all.txt** and **methylated_reads_all.txt** which contain the total and methylated reads, respectively, for the segmented regions.
+The first step in LuxHMM is to segment the genome via HMM (using the python package `pomegranate`) into regions that are hypomethylated, hypermethylated or equally methylated between two groups. A python script **run\_hmm.py** is supplied which calls the python package `pomegranate` to determine the methylation state for each cytosine then combines adjacent cytosines with the same methylation state into regions. The script returns the output files **total_reads_all.txt** and **methylated_reads_all.txt** which contain the total and methylated reads, respectively, for the segmented regions.
 
 	 usage: run_hmm.py [-h] -l1 CONTROL_INDICES_LIST -l2 CASE_INDICES_LIST -d1 TOTAL_READ_COUNTS_FILE -d2 METHYLATED_READ_COUNTS_FILE -o OUTFOLDER -m MIN_TOTAL_COUNT -c MIN_CPGS
 
