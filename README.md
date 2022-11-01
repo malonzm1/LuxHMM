@@ -76,7 +76,7 @@ The output files are **total\_reads\_all.txt**, **methylated\_reads\_all.txt**, 
 
 The second step in using LuxPom is estimating the methylation levels and inferring differential methylation. A python script **run\_luxPom.py** is supplied for generating input files from user-supplied data files and running the analysis (includes compiling of relevant __Stan__ code). 
 
-	 usage: run_luxPom.py -t REGION_TOTAL_FILE -m REGION_METHYLATED_FILE -d DESIGN_MATRIX -o OUTFOLDER -a BS_EFF -b BS_BEFF -c SEQ_ERR -l $STAN_HOME
+	 usage: run_luxhmm.py -t REGION_TOTAL_FILE -m REGION_METHYLATED_FILE -d DESIGN_MATRIX -o OUTFOLDER -a BS_EFF -b BS_BEFF -c SEQ_ERR -l $STAN_HOME
 	 
 	 Estimates methylation levels and infers differential methylation
 	 
@@ -89,7 +89,7 @@ The second step in using LuxPom is estimating the methylation levels and inferri
 	 -a BS_EFF, --bs_Eff BS_EFF						comma-delimited bisulfite conversion efficiencies of replicates; if not supplied, defaults to 1.0
 	 -b BS_BEFF, --bs_BEff BS_BEFF						comma-delimited incorrect bisulfite conversion efficiencies of replicates; if not supplied, defaults to 0
 	 -c SEQ_ERR, --seq_Err SEQ_ERR						comma-delimited sequencing error rates of replicates; if not supplied, defaults to 0
-
+	 - r RUN_ADVI, --run_advi RUN_ADVI					whether to run ADVI or not (HMC) ('T' or 'F'); if not supplied, defaults to 'T'	
 	 -l $STAN_HOME, --cmdstan_loc $STAN_HOME 				CmdStan directory with full pathname
 	 -v, --version								show program's version number and exit
 
