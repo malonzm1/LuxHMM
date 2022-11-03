@@ -1,0 +1,13 @@
+Intercept	IsCase
+Case1	1	1
+Case2	1	1
+Case3	1	1
+Case4	1	1
+Case5	1	1
+Case6	1	1
+Control1	1	0
+Control2	1	0
+Control3	1	0
+Control4	1	0
+Control5	1	0
+Control6	1	0
