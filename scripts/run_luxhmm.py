@@ -28,7 +28,7 @@ if __name__ == '__main__':
         parser.add_argument('-b', '--bsBEff', action='store', dest='bsBEff', type=str, required=False, help='comma-delimited incorrect bisulfite conversion efficiencies of replicates; defaults to 0')
         parser.add_argument('-c', '--seqErr', action='store', dest='seqErr', type=str, required=False, help='comma-delimited sequencing error rates of replicates; defaults to 0')
         parser.add_argument('-r', '--run_advi', action='store', dest='advi', type=str, required=False, default='T', help='whether to run ADVI or not (HMC); if not supplied, defaults to T')
-        parser.add_argument('-l','--cmdstan_loc', action='store', dest='cmdstan_directory', type=str, required=False, default='/scratch/cs/csb/users/malonzm1/software/cmdstan-2.29.0', help='cmdstan directory with full pathname')
+        parser.add_argument('-l','--cmdstan_loc', action='store', dest='cmdstan_directory', type=str, required=True, help='cmdstan directory with full pathname')
         parser.add_argument('-v','--version',action='version',version='0.666')
         options = parser.parse_args()
 
