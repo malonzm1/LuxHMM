@@ -70,7 +70,7 @@ if __name__ == '__main__':
                 loci = numpy.array([loci])
 
         outfolder = options.outfolder
-        #if not os.path.exists(outfolder): os.makedirs(outfolder)
+        if not os.path.exists(outfolder): os.makedirs(outfolder)
 
         stan_dir = options.cmdstan_directory
 
