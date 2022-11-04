@@ -67,14 +67,14 @@ The file **total\_fileList.txt** contains the list of textfiles containing the t
 
 The output files are **total\_reads\_all.txt**, **methylated\_reads\_all.txt**, **hidden\_states\_all.txt**, **counts.txt**, **model\_states.txt** and **transition\_probs.txt**.
 
-* **total\_reads\_all.txt** and **methylated\_reads\_all.txt** contain the combined total and methylated read counts, respectively, with one line per region. Each tab-delimited file follows the format `<chromosome>:<start>:<end> <Total/methylated count, sample 1> ... <Total/methylated count, sample N>`. These files are used as input for **run\_luxPom.py** described below.
+* **total\_reads\_all.txt** and **methylated\_reads\_all.txt** contain the combined total and methylated read counts, respectively, with one line per region. Each tab-delimited file follows the format `<chromosome>:<start>:<end> <Total/methylated count, sample 1> ... <Total/methylated count, sample N>`. These files are used as input for **run\_luxhmm.py** described below.
 * **hidden\_states\_all.txt** contains the methylation state for each CpG (s0 - equal methylation, s1 - hypermethylation and s2 - hypomethylation).
 * **counts.txt** contains the methylation state and the number of CpGs for each region.
 * **model\_states.txt** contains the state distributions.
 * **transition\_probs.txt** contains the transition probabilities.
 
 
-The second step in using LuxPom is estimating the methylation levels and inferring differential methylation. A python script **run\_luxPom.py** is supplied for generating input files from user-supplied data files and running the analysis (includes compiling of relevant __Stan__ code). 
+The second step in using LuxHMM is estimating the methylation levels and inferring differential methylation. A python script **run\_luxhmm.py** is supplied for generating input files from user-supplied data files and running the analysis (includes compiling of relevant __Stan__ code). 
 
 	 usage: run_luxhmm.py -t REGION_TOTAL_FILE -m REGION_METHYLATED_FILE -d DESIGN_MATRIX -o OUTFOLDER -a BS_EFF -b BS_BEFF -c SEQ_ERR -l $STAN_HOME
 	 
@@ -93,9 +93,9 @@ The second step in using LuxPom is estimating the methylation levels and inferri
 	 -l $STAN_HOME, --cmdstan_loc $STAN_HOME 				CmdStan directory with full pathname
 	 -v, --version								show program's version number and exit
 
-For instance, run_luxPom.py can be called as
+For instance, run_luxhmm.py can be called as
 
-	python run_luxPom.py -t hmm_output/total_reads_all.txt -m hmm_output/methylated_reads_all.txt -d design_matrix.txt-l $STAN_HOME
+	python run_luxhmm.py -t hmm_output/total_reads_all.txt -m hmm_output/methylated_reads_all.txt -d design_matrix.txt-l $STAN_HOME
 
 *Input*
 
