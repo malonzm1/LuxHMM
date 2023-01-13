@@ -95,7 +95,7 @@ if __name__ == '__main__':
                 os.system('cp {}/luxhmm .'.format(curdir))
                 os.system('chmod 755 luxhmm')
                 if options.advi == 'F': os.system('./luxhmm sample num_samples=250 num_chains=4 data file=data.json output file=output.csv')
-                if options.advi == 'T': os.system('./luxhmm variational output_samples=1000 elbo_samples=1000 grad_samples=10 data file=data.json output diagnostic_file=diagnostics.csv > summary.txt')
+                if options.advi == 'T': os.system('./luxhmm variational output_samples=1000 elbo_samples=100 grad_samples=1 data file=data.json output diagnostic_file=diagnostics.csv > summary.txt')
                 if options.advi == 'T': 
                         while 'COMPLETED' not in open('summary.txt','r').readlines()[-1]: os.system('./luxhmm variational output_samples=1000 elbo_samples=1000 grad_samples=10 data file=data.json output diagnostic_file=diagnostics.csv > summary.txt')
                 # compute bayes factor  
